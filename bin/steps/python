@@ -32,6 +32,7 @@ if [ ! "$SKIP_INSTALL" ]; then
     if [[ $? != 0 ]] ; then
       puts-warn "Requested runtime ($PYTHON_VERSION) is not available for this stack ($STACK)."
       puts-warn "Aborting.  More info: https://devcenter.heroku.com/articles/python-support"
+      puts-warn "(requested url https://opencounter-python-builds.s3.amazonaws.com/$STACK/runtimes/$PYTHON_VERSION.tar.gz)"
       exit 1
     fi
 
